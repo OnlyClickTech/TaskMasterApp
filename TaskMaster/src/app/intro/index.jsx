@@ -1,12 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Redirect } from 'expo-router';
+import { useState } from 'react';
+import { View } from 'react-native';
+import OnboardingContainer from '../../components/Onboarding/OnboardingContainer';
 
-export default function index() {
+export default function IntroPage() {
+  const [onboardingComplete, setOnboardingComplete] = useState(false);
+
+  const handleComplete = () => {
+    setOnboardingComplete(true);
+  };
+
+  if (onboardingComplete) {
+    return <Redirect href="/auth/sign-in" />;
+  }
+
   return (
-    <View>
-      <Text>index</Text>
+    <View style={{ flex: 1 }}>
+      <OnboardingContainer onComplete={handleComplete} />
     </View>
-  )
+  );
 }
-
-const styles = StyleSheet.create({})

@@ -1,12 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Stack } from "expo-router";
 import React from "react";
 
-export default function index() {
-  return (
-    <View>
-      <Text>Auth</Text>
-    </View>
-  );
+function appLayout() {
+  return <Stack />;
 }
 
-const styles = StyleSheet.create({});
+export default appLayout;
