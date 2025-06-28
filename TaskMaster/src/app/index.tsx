@@ -12,19 +12,5 @@ export default function Index() {
   useEffect(() => {
     a();
   }, []);
-  return (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      {/* <Redirect href={"./(protected)"} /> */}
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Link href={"./(app)"}>App</Link>
-      <Link href={"./(app)/auth"}>auth</Link>
-      <Redirect href={"./(app)/protected"} />
-      <Link href={"./intro"}>Intro</Link>
-      {/* <Redirect href={"./(app)"} /> */}
-    </View>
-  );
+  return <></>;
 }
